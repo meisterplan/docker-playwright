@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -ex
+
+echo "### RUN pre_build START: QEMU and buildx ###"
+
+docker run --rm --privileged tonistiigi/binfmt --install all
+
+docker buildx create --use --name multiarchbuilder
+docker buildx ls
+
+echo "### RUN pre_build END ###"

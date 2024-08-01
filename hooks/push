@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -ex
+
+echo "### RUN push: This has already been done by buildx. ###"
